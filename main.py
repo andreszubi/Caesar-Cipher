@@ -12,12 +12,12 @@ def encrypt(original_text, shift_amount):
     encrypted_text = ""
     for letter in original_text:
         position = alphabet.index(letter)
-        new_position = position + shift_amount
+        if position[-1] == 'z':
+            new_position = position[0] + shift_amount - 1
+        else:
+            new_position = position + shift_amount
         new_letter = alphabet[new_position]
         encrypted_text += new_letter
-    print(encrypted_text)
-# TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
+    print(f"The encrypted text is {encrypted_text}")
 
-
-# TODO-3: Call the 'encrypt()' function and pass in the user inputs. You should be able to test the code and encrypt a
-#  message.
+encrypt(text, shift)
