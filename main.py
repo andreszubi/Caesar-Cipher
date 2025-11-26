@@ -6,7 +6,7 @@ shift = int(input("Type the shift number:\n"))
 
 def caesar(direction, text, shift):
     # Create a condition to check if the direction is 'encode'
-    if direction == "encode":
+    if direction.lower() == "encode":
     # Create a function called 'encrypt' that takes 'original_text' and 'shift_amount' as 2 inputs.
         def encrypt(original_text, shift_amount):
             #  Create a variable called 'encrypted_text' to store the encrypted text.
@@ -27,7 +27,7 @@ def caesar(direction, text, shift):
             # Call the encrypt function
         encrypt(original_text=text, shift_amount=shift)
 # Create a condition to check if the direction is 'decode'
-    elif direction == "decode":
+    elif direction.lower() == "decode":
         # Create a function called 'decrypt' that takes 'encrypted_text' and 'shift_amount' as 2 inputs.
         def decrypt(encrypted_text, shift_amount):
             # Create a variable called 'decrypted_text' to store the decrypted text
