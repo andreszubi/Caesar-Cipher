@@ -26,15 +26,18 @@ def caesar(original_text, shift_amount, encode_or_decode):
     print(f"Here is the {encode_or_decode}d result: {output_text}")
 
 
-# Get the direction, text and shift amount from the user
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
 
 # Initialize the while loop to keep the program running until the user wants to stop
 go_again = True
 # While the user wants to go again, continue the loop
 while go_again:
+   
+    # Get the direction, text and shift amount from the user
+    print(logo)
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
     # Call the caesar function
     caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
     # Ask the user if they want to go again
@@ -43,11 +46,3 @@ while go_again:
     if restart == "no":
         go_again = False
         print("Goodbye!")
-    # If the user wants to go again, print the logo and ask for the direction, text and shift amount again
-    else:
-        print(logo)
-        # Ask the user for the direction, text and shift amount again
-        direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-        text = input("Type your message:\n").lower()
-        # Ask the user for the shift amount again
-        shift = int(input("Type the shift number:\n"))
