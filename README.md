@@ -7,8 +7,9 @@ A Python implementation of the classic Caesar Cipher encryption and decryption a
 - 🔐 **Encode messages**: Encrypt text using a customizable shift amount
 - 🔓 **Decode messages**: Decrypt previously encoded text
 - 🔄 **Interactive loop**: Continue encoding/decoding multiple messages without restarting
-- 🎨 **ASCII art logo**: Beautiful visual display when the program starts
+- 🎨 **ASCII art logo**: Beautiful visual display shown at the start of each operation
 - 📝 **Preserves non-alphabetic characters**: Spaces, numbers, and special characters remain unchanged
+- 🔁 **Continuous operation**: Logo and prompts refresh for each new encoding/decoding task
 
 ## How It Works
 
@@ -40,16 +41,18 @@ Run the program:
 python main.py
 ```
 
-The program will prompt you for:
+The program will display the logo and prompt you for:
 1. **Direction**: Type `encode` to encrypt or `decode` to decrypt
 2. **Message**: Enter the text you want to encode/decode
 3. **Shift number**: Enter the number of positions to shift (must be the same shift used for encoding when decoding)
 
-After processing, you can choose to continue with another message or exit.
+After processing, you can choose to continue with another message (the logo will be displayed again) or exit by typing `no`.
 
 ## Example
 
 ```
+[ASCII art logo displayed]
+
 Type 'encode' to encrypt, type 'decode' to decrypt:
 encode
 Type your message:
@@ -61,6 +64,8 @@ Here is the encoded result: khoor zruog
 Type 'yes' if you want to go again. Otherwise type 'no'.
 yes
 
+[ASCII art logo displayed again]
+
 Type 'encode' to encrypt, type 'decode' to decrypt:
 decode
 Type your message:
@@ -68,15 +73,20 @@ khoor zruog
 Type the shift number:
 3
 Here is the decoded result: hello world
+
+Type 'yes' if you want to go again. Otherwise type 'no'.
+no
+Goodbye!
 ```
 
 ## Project Structure
 
 ```
 Caesar-Cipher/
-├── main.py      # Main program logic
-├── art.py       # ASCII art logo
-└── README.md    # This file
+├── main.py      # Main program logic with interactive loop
+├── art.py       # ASCII art logo definition
+├── README.md    # Project documentation
+└── .gitignore   # Git ignore file
 ```
 
 ## Notes
