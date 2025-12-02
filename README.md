@@ -7,7 +7,7 @@ A Python implementation of the classic Caesar Cipher encryption and decryption a
 - 🔐 **Encode messages**: Encrypt text using a customizable shift amount
 - 🔓 **Decode messages**: Decrypt previously encoded text
 - 🔄 **Interactive loop**: Continue encoding/decoding multiple messages without restarting
-- 🎨 **ASCII art logo**: Beautiful visual display shown at the start of each operation
+- 🎨 **ASCII art logos**: Beautiful visual displays - welcome logo at start and goodbye logo on exit
 - 📝 **Preserves non-alphabetic characters**: Spaces, numbers, and special characters remain unchanged
 - 🔁 **Continuous operation**: Logo and prompts refresh for each new encoding/decoding task
 
@@ -46,7 +46,7 @@ The program will display the logo and prompt you for:
 2. **Message**: Enter the text you want to encode/decode
 3. **Shift number**: Enter the number of positions to shift (must be the same shift used for encoding when decoding)
 
-After processing, you can choose to continue with another message (the logo will be displayed again) or exit by typing `no`.
+After processing, you can choose to continue with another message (the logo will be displayed again) or exit by typing `no` to see a goodbye message.
 
 ## Example
 
@@ -59,7 +59,7 @@ Type your message:
 hello world
 Type the shift number:
 3
-Here is the encoded result: khoor zruog
+Here is the encoded result: khoor zruog.
 
 Type 'yes' if you want to go again. Otherwise type 'no'.
 yes
@@ -72,11 +72,11 @@ Type your message:
 khoor zruog
 Type the shift number:
 3
-Here is the decoded result: hello world
+Here is the decoded result: hello world.
 
 Type 'yes' if you want to go again. Otherwise type 'no'.
 no
-Goodbye!
+[Goodbye ASCII art logo displayed]
 ```
 
 ## Project Structure
@@ -84,7 +84,7 @@ Goodbye!
 ```
 Caesar-Cipher/
 ├── main.py      # Main program logic with interactive loop
-├── art.py       # ASCII art logo definition
+├── art.py       # ASCII art logos (welcome and goodbye)
 ├── README.md    # Project documentation
 └── .gitignore   # Git ignore file
 ```
